@@ -1,0 +1,6 @@
+12:15:09 **** Incremental Build of configuration Debug for project FSK_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+12:15:09 Build Finished (took 119ms)
+

@@ -1,0 +1,941 @@
+18:02:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\temp_xsdb_launch_script.tcl
+18:02:45 INFO  : Registering command handlers for Vitis TCF services
+18:02:47 INFO  : XSCT server has started successfully.
+18:02:47 INFO  : plnx-install-location is set to ''
+18:02:48 INFO  : Platform repository initialization has completed.
+18:02:48 INFO  : Successfully done setting XSCT server connection channel  
+18:02:48 INFO  : Successfully done query RDI_DATADIR 
+18:02:48 INFO  : Successfully done setting workspace for the tool. 
+18:03:14 INFO  : Result from executing command 'getProjects': FMC_FSK
+18:03:14 INFO  : Result from executing command 'getPlatforms': 
+18:06:10 INFO  : Result from executing command 'getProjects': FMC_FSK
+18:06:10 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+18:06:37 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+18:06:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:06:55 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+18:06:55 INFO  : 'jtag frequency' command is executed.
+18:06:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+18:06:58 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+18:06:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:06:59 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+18:06:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:06:59 INFO  : Context for processor 'microblaze_0' is selected.
+18:06:59 INFO  : System reset is completed.
+18:07:02 INFO  : 'after 3000' command is executed.
+18:07:02 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:03 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+18:07:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+18:07:03 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:03 INFO  : 'con' command is executed.
+18:07:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:07:03 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default.tcl'
+18:07:10 INFO  : Disconnected from the channel tcfchan#4.
+18:07:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:07:11 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+18:07:11 INFO  : 'jtag frequency' command is executed.
+18:07:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+18:07:14 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+18:07:14 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:14 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+18:07:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:07:14 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:14 INFO  : System reset is completed.
+18:07:17 INFO  : 'after 3000' command is executed.
+18:07:17 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:17 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+18:07:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+18:07:17 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:17 INFO  : 'con' command is executed.
+18:07:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:07:17 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default.tcl'
+18:07:47 INFO  : Disconnected from the channel tcfchan#5.
+18:07:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:07:49 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+18:07:49 INFO  : 'jtag frequency' command is executed.
+18:07:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+18:07:51 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+18:07:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:51 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+18:07:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:07:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:51 INFO  : System reset is completed.
+18:07:54 INFO  : 'after 3000' command is executed.
+18:07:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:54 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+18:07:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+18:07:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:07:54 INFO  : 'con' command is executed.
+18:07:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:07:54 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default.tcl'
+18:08:04 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\temp_xsdb_launch_script.tcl
+18:49:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\temp_xsdb_launch_script.tcl
+18:49:03 INFO  : XSCT server has started successfully.
+18:49:03 INFO  : Successfully done setting XSCT server connection channel  
+18:49:03 INFO  : plnx-install-location is set to ''
+18:49:03 INFO  : Successfully done setting workspace for the tool. 
+18:49:06 INFO  : Platform repository initialization has completed.
+18:49:06 INFO  : Registering command handlers for Vitis TCF services
+18:49:07 INFO  : Successfully done query RDI_DATADIR 
+18:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:43 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+18:50:43 INFO  : 'jtag frequency' command is executed.
+18:50:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+18:50:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:47 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+18:50:47 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:47 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+18:50:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:50:47 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:47 INFO  : System reset is completed.
+18:50:50 INFO  : 'after 3000' command is executed.
+18:50:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:51 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+18:50:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+18:50:51 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+18:50:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:51 INFO  : 'jtag frequency' command is executed.
+18:50:51 INFO  : 'con' command is executed.
+18:50:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:50:51 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+18:50:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+18:50:54 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+18:50:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:54 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+18:50:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:50:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:54 INFO  : System reset is completed.
+18:50:57 INFO  : 'after 3000' command is executed.
+18:50:57 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:57 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+18:50:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+18:50:57 INFO  : Context for processor 'microblaze_0' is selected.
+18:50:57 INFO  : 'con' command is executed.
+18:50:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:50:57 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:07:19 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+19:07:36 INFO  : Result from executing command 'getProjects': FMC_FSK
+19:07:36 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+19:07:37 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+19:09:18 INFO  : Result from executing command 'getProjects': FMC_FSK
+19:09:18 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+19:09:24 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+19:09:25 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+19:09:25 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+19:09:25 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+19:09:25 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+19:09:33 INFO  : Disconnected from the channel tcfchan#1.
+19:09:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:35 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:09:35 INFO  : 'jtag frequency' command is executed.
+19:09:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:09:37 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:09:37 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:37 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:09:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:09:37 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:37 INFO  : System reset is completed.
+19:09:40 INFO  : 'after 3000' command is executed.
+19:09:40 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:40 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:09:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:09:40 INFO  : Context for processor 'microblaze_0' is selected.
+19:09:40 INFO  : 'con' command is executed.
+19:09:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:09:40 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:10:09 INFO  : Disconnected from the channel tcfchan#5.
+19:11:12 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\temp_xsdb_launch_script.tcl
+19:11:15 INFO  : XSCT server has started successfully.
+19:11:15 INFO  : plnx-install-location is set to ''
+19:11:15 INFO  : Successfully done setting XSCT server connection channel  
+19:11:15 INFO  : Successfully done setting workspace for the tool. 
+19:11:17 INFO  : Platform repository initialization has completed.
+19:11:18 INFO  : Registering command handlers for Vitis TCF services
+19:11:18 INFO  : Successfully done query RDI_DATADIR 
+19:11:24 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+19:11:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:11:29 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:11:29 INFO  : 'jtag frequency' command is executed.
+19:11:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:11:31 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:11:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:11:31 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:11:31 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:11:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:11:31 INFO  : System reset is completed.
+19:11:34 INFO  : 'after 3000' command is executed.
+19:11:34 INFO  : Context for processor 'microblaze_0' is selected.
+19:11:35 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:11:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:11:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:11:35 INFO  : 'con' command is executed.
+19:11:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:11:35 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:11:44 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+19:11:56 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+19:11:59 INFO  : Disconnected from the channel tcfchan#1.
+19:12:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:12:01 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:12:01 INFO  : 'jtag frequency' command is executed.
+19:12:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:12:03 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:12:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:04 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:12:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:12:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:04 INFO  : System reset is completed.
+19:12:07 INFO  : 'after 3000' command is executed.
+19:12:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:08 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:12:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:12:08 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:08 INFO  : 'con' command is executed.
+19:12:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:12:08 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:12:50 INFO  : Disconnected from the channel tcfchan#2.
+19:12:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:12:50 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:12:50 INFO  : 'jtag frequency' command is executed.
+19:12:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:12:53 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:12:53 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:54 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:12:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:12:54 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:54 INFO  : System reset is completed.
+19:12:57 INFO  : 'after 3000' command is executed.
+19:12:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:58 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:12:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:12:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:12:58 INFO  : 'con' command is executed.
+19:12:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:12:58 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:15:22 INFO  : Disconnected from the channel tcfchan#3.
+19:15:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:15:24 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:15:24 INFO  : 'jtag frequency' command is executed.
+19:15:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:15:26 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:15:26 INFO  : Context for processor 'microblaze_0' is selected.
+19:15:27 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:15:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:15:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:15:27 INFO  : System reset is completed.
+19:15:30 INFO  : 'after 3000' command is executed.
+19:15:30 INFO  : Context for processor 'microblaze_0' is selected.
+19:15:31 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:15:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:15:31 INFO  : Context for processor 'microblaze_0' is selected.
+19:15:31 INFO  : 'con' command is executed.
+19:15:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:15:31 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+19:16:59 INFO  : Disconnected from the channel tcfchan#4.
+19:17:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:17:00 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+19:17:00 INFO  : 'jtag frequency' command is executed.
+19:17:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+19:17:03 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+19:17:03 INFO  : Context for processor 'microblaze_0' is selected.
+19:17:04 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+19:17:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:17:04 INFO  : Context for processor 'microblaze_0' is selected.
+19:17:04 INFO  : System reset is completed.
+19:17:07 INFO  : 'after 3000' command is executed.
+19:17:07 INFO  : Context for processor 'microblaze_0' is selected.
+19:17:08 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+19:17:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+19:17:08 INFO  : Context for processor 'microblaze_0' is selected.
+19:17:08 INFO  : 'con' command is executed.
+19:17:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:17:08 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+20:35:51 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+20:36:00 INFO  : Result from executing command 'getProjects': FMC_FSK
+20:36:00 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+20:36:04 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+20:36:08 INFO  : Disconnected from the channel tcfchan#5.
+20:36:09 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+20:36:09 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+20:36:09 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+20:36:09 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+20:36:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:09 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+20:36:09 INFO  : 'jtag frequency' command is executed.
+20:36:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+20:36:12 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+20:36:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:36:12 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+20:36:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:36:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:36:12 INFO  : System reset is completed.
+20:36:15 INFO  : 'after 3000' command is executed.
+20:36:15 INFO  : Context for processor 'microblaze_0' is selected.
+20:36:16 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+20:36:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+20:36:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:36:16 INFO  : 'con' command is executed.
+20:36:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:36:16 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+21:14:31 INFO  : Successfully done sdx_reload_mss "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/microblaze_0/standalone_domain/bsp/system.mss"
+21:14:40 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+21:14:48 INFO  : Result from executing command 'getProjects': FMC_FSK
+21:14:48 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+21:15:01 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+21:15:01 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:15:01 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+21:15:01 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+21:15:01 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+21:15:08 INFO  : Disconnected from the channel tcfchan#7.
+21:15:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:10 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+21:15:10 INFO  : 'jtag frequency' command is executed.
+21:15:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+21:15:12 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+21:15:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:15:12 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+21:15:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:15:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:15:12 INFO  : System reset is completed.
+21:15:15 INFO  : 'after 3000' command is executed.
+21:15:15 INFO  : Context for processor 'microblaze_0' is selected.
+21:15:16 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+21:15:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+21:15:16 INFO  : Context for processor 'microblaze_0' is selected.
+21:15:16 INFO  : 'con' command is executed.
+21:15:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:15:16 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+21:31:18 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+21:31:28 INFO  : Result from executing command 'getProjects': FMC_FSK
+21:31:28 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+21:31:33 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+21:31:37 INFO  : Disconnected from the channel tcfchan#9.
+21:31:38 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+21:31:38 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+21:31:38 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+21:31:38 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+21:31:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:31:39 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+21:31:39 INFO  : 'jtag frequency' command is executed.
+21:31:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+21:31:41 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+21:31:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:42 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+21:31:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:31:42 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:42 INFO  : System reset is completed.
+21:31:45 INFO  : 'after 3000' command is executed.
+21:31:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:45 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+21:31:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+21:31:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:45 INFO  : 'con' command is executed.
+21:31:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:31:45 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+21:33:16 INFO  : Disconnected from the channel tcfchan#11.
+21:33:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:33:17 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+21:33:17 INFO  : 'jtag frequency' command is executed.
+21:33:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+21:33:20 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+21:33:20 INFO  : Context for processor 'microblaze_0' is selected.
+21:33:20 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+21:33:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:33:20 INFO  : Context for processor 'microblaze_0' is selected.
+21:33:20 INFO  : System reset is completed.
+21:33:23 INFO  : 'after 3000' command is executed.
+21:33:23 INFO  : Context for processor 'microblaze_0' is selected.
+21:33:23 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+21:33:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+21:33:23 INFO  : Context for processor 'microblaze_0' is selected.
+21:33:23 INFO  : 'con' command is executed.
+21:33:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:33:23 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+21:35:05 INFO  : Disconnected from the channel tcfchan#12.
+21:35:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:35:06 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+21:35:06 INFO  : 'jtag frequency' command is executed.
+21:35:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+21:35:09 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+21:35:09 INFO  : Context for processor 'microblaze_0' is selected.
+21:35:09 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+21:35:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:35:09 INFO  : Context for processor 'microblaze_0' is selected.
+21:35:09 INFO  : System reset is completed.
+21:35:12 INFO  : 'after 3000' command is executed.
+21:35:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:35:12 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+21:35:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+21:35:12 INFO  : Context for processor 'microblaze_0' is selected.
+21:35:12 INFO  : 'con' command is executed.
+21:35:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:35:12 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+21:38:46 INFO  : Disconnected from the channel tcfchan#13.
+21:38:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:38:47 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+21:38:47 INFO  : 'jtag frequency' command is executed.
+21:38:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+21:38:49 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+21:38:49 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:49 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+21:38:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:38:50 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:50 INFO  : System reset is completed.
+21:38:53 INFO  : 'after 3000' command is executed.
+21:38:53 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:53 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+21:38:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+21:38:53 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:53 INFO  : 'con' command is executed.
+21:38:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:38:53 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+22:04:56 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+22:05:15 INFO  : Result from executing command 'getProjects': FMC_FSK
+22:05:15 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+22:05:21 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+22:05:22 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+22:05:22 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+22:05:22 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+22:05:22 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+22:05:25 INFO  : Disconnected from the channel tcfchan#14.
+22:05:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:30 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+22:05:30 INFO  : 'jtag frequency' command is executed.
+22:05:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+22:05:32 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+22:05:32 INFO  : Context for processor 'microblaze_0' is selected.
+22:05:33 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+22:05:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:05:33 INFO  : Context for processor 'microblaze_0' is selected.
+22:05:33 INFO  : System reset is completed.
+22:05:36 INFO  : 'after 3000' command is executed.
+22:05:36 INFO  : Context for processor 'microblaze_0' is selected.
+22:05:36 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+22:05:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+22:05:36 INFO  : Context for processor 'microblaze_0' is selected.
+22:05:37 INFO  : 'con' command is executed.
+22:05:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:05:37 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+09:07:25 INFO  : Disconnected from the channel tcfchan#16.
+09:07:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:07:27 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+09:07:27 INFO  : 'jtag frequency' command is executed.
+09:07:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+09:07:29 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+09:07:29 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:30 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+09:07:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:07:30 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:30 INFO  : System reset is completed.
+09:07:33 INFO  : 'after 3000' command is executed.
+09:07:33 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:34 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+09:07:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+09:07:34 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:34 INFO  : 'con' command is executed.
+09:07:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:07:34 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+09:08:01 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+09:08:13 INFO  : Result from executing command 'getProjects': FMC_FSK
+09:08:13 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+09:08:20 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+09:08:22 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+09:08:22 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+09:08:22 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+09:08:22 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+09:08:24 INFO  : Disconnected from the channel tcfchan#17.
+09:08:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:08:26 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+09:08:26 INFO  : 'jtag frequency' command is executed.
+09:08:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+09:08:28 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+09:08:28 INFO  : Context for processor 'microblaze_0' is selected.
+09:08:28 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+09:08:28 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:08:28 INFO  : Context for processor 'microblaze_0' is selected.
+09:08:28 INFO  : System reset is completed.
+09:08:31 INFO  : 'after 3000' command is executed.
+09:08:31 INFO  : Context for processor 'microblaze_0' is selected.
+09:08:32 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+09:08:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+09:08:32 INFO  : Context for processor 'microblaze_0' is selected.
+09:08:32 INFO  : 'con' command is executed.
+09:08:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:08:32 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+09:16:14 INFO  : Dumping Memory Contents ...
+09:16:30 INFO  : Dumped Memory Contents Successfully to C:\Users\THYOON\Desktop\asdfdsfs.bin
+09:31:34 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+09:32:10 INFO  : Result from executing command 'getProjects': FMC_FSK
+09:32:10 INFO  : Result from executing command 'getPlatforms': FMC_FSK|E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm
+09:32:14 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+09:32:15 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+09:32:15 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+09:32:15 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+09:32:15 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+09:32:17 INFO  : Disconnected from the channel tcfchan#19.
+09:32:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:32:19 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+09:32:19 INFO  : 'jtag frequency' command is executed.
+09:32:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+09:32:21 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+09:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+09:32:21 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+09:32:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+09:32:21 INFO  : System reset is completed.
+09:32:24 INFO  : 'after 3000' command is executed.
+09:32:24 INFO  : Context for processor 'microblaze_0' is selected.
+09:32:25 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+09:32:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+09:32:25 INFO  : Context for processor 'microblaze_0' is selected.
+09:32:25 INFO  : 'con' command is executed.
+09:32:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:32:25 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+09:33:04 INFO  : Disconnected from the channel tcfchan#21.
+09:33:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:33:06 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+09:33:06 INFO  : 'jtag frequency' command is executed.
+09:33:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+09:33:08 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+09:33:08 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:08 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+09:33:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:33:08 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:08 INFO  : System reset is completed.
+09:33:11 INFO  : 'after 3000' command is executed.
+09:33:11 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:11 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+09:33:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+09:33:12 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:12 INFO  : 'con' command is executed.
+09:33:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:33:12 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_New\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+09:34:05 INFO  : Disconnected from the channel tcfchan#22.
+12:14:25 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\PROJ_Archive\release\FMC_LCD_FSK_1_2_B\Firmware\vitis_2020_1\temp_xsdb_launch_script.tcl
+12:14:27 INFO  : XSCT server has started successfully.
+12:14:27 INFO  : plnx-install-location is set to ''
+12:14:27 INFO  : Successfully done setting XSCT server connection channel  
+12:14:27 INFO  : Successfully done setting workspace for the tool. 
+12:14:30 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+12:14:30 INFO  : Platform repository initialization has completed.
+12:14:31 INFO  : Registering command handlers for Vitis TCF services
+12:14:31 INFO  : Successfully done query RDI_DATADIR 
+12:14:58 INFO  : Hardware specification for platform project 'FMC_FSK' is updated.
+12:15:06 INFO  : Result from executing command 'getProjects': FMC_FSK
+12:15:06 INFO  : Result from executing command 'getPlatforms': 
+12:15:07 INFO  : Checking for BSP changes to sync application flags for project 'FSK'...
+12:15:09 INFO  : The hardware specfication used by project 'FSK' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+12:15:09 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_1_2_B\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.bit' stored in project is removed.
+12:15:09 INFO  : The file 'E:\PROJ_Archive\release\FMC_LCD_FSK_1_2_B\Firmware\vitis_2020_1\FSK\_ide\bitstream\FMC_LCD_test_top.mmi' stored in project is removed.
+12:15:09 INFO  : The updated bitstream files are copied from platform to folder 'E:\PROJ_Archive\release\FMC_LCD_FSK_1_2_B\Firmware\vitis_2020_1\FSK\_ide\bitstream' in project 'FSK'.
+12:15:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:15:21 INFO  : Jtag cable 'Digilent JTAG-SMT2NC 210308AC4EBB' is selected.
+12:15:21 INFO  : 'jtag frequency' command is executed.
+12:15:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}' command is executed.
+12:15:23 INFO  : FPGA configured successfully with bitstream "E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit"
+12:15:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:15:23 INFO  : Hardware design and registers information is loaded from 'E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa'.
+12:15:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:15:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:15:23 INFO  : System reset is completed.
+12:15:26 INFO  : 'after 3000' command is executed.
+12:15:26 INFO  : Context for processor 'microblaze_0' is selected.
+12:15:26 INFO  : The application 'E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FSK/Debug/FSK.elf' is downloaded to processor 'microblaze_0'.
+12:15:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308AC4EBB" && level==0 && jtag_device_ctx=="jsn-JTAG-SMT2NC-210308AC4EBB-13632093-0"}
+fpga -file E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FSK/_ide/bitstream/FMC_LCD_test_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/hw/FMC_LCD_test_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FSK/Debug/FSK.elf
+----------------End of Script----------------
+
+12:15:27 INFO  : Context for processor 'microblaze_0' is selected.
+12:15:27 INFO  : 'con' command is executed.
+12:15:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+12:15:27 INFO  : Launch script is exported to file 'E:\PROJ_Archive\release\FMC_LCD_FSK_1_2_B\Firmware\vitis_2020_1\.sdk\launch_scripts\single_application_debug\debugger_fsk-default_1.tcl'
+12:16:50 INFO  : Disconnected from the channel tcfchan#2.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="FSK" location="E:/PROJ_Archive/release/FMC_LCD_FSK_New/Firmware/vitis_2020_1/FSK" platform="E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/FMC_FSK.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="FSK_system" sysConfig="FMC_FSK" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="e2b325ffceb80d5ca8371218a6f853ca">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1227681955">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.400596683" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER Touch_Intr_ctrl
+	OPTION supported_peripherals = (Touch_Intr_ctrl);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = Touch_Intr_ctrl;
+END DRIVER

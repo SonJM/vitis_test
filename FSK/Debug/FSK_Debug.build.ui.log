@@ -1,0 +1,217 @@
+2020-11-02T12:15:07.551168300255-12:15:07 **** Incremental Build of configuration Debug for project FSK ****
+000-make all 
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IE:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-../src/helloworld.c: In function 'main':
+000/FSK/src/helloworld.c92-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:92:9: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-   92 |  memset(0x80C00000, 0x0, 4147200);
+000-      |         ^~~~~~~~~~
+000-      |         |
+000-      |         unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c93-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:93:9: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-   93 |  memset(0x81000000, 0x0, 4147200);
+000-      |         ^~~~~~~~~~
+000-      |         |
+000-      |         unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c95-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:95:9: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-   95 |  memset(0x80000000, 0x0, 4147200);
+000-      |         ^~~~~~~~~~
+000-      |         |
+000-      |         unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c96-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:96:9: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-   96 |  memset(0x80400000, 0x0, 4147200);
+000-      |         ^~~~~~~~~~
+000-      |         |
+000-      |         unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c220-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:220:14: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-  220 |       memset(0x80C00000, 0x0, 4147200);
+000-      |              ^~~~~~~~~~
+000-      |              |
+000-      |              unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c221-1-1passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]1-../src/helloworld.c:221:14: warning: passing argument 1 of 'memset' makes pointer from integer without a cast [-Wint-conversion]
+000-  221 |       memset(0x81000000, 0x0, 4147200);
+000-      |              ^~~~~~~~~~
+000-      |              |
+000-      |              unsigned int
+000-In file included from E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from ../src/helloworld.c:3:
+000/FSK33-1-1expected 'void *' but argument is of type 'unsigned int'0-d:\tool_windows\xilinx\vitis\2020.1\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:33:9: note: expected 'void *' but argument is of type 'unsigned int'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/FSK/src/helloworld.c180-1-1unused variable 'c' [-Wunused-variable]1-../src/helloworld.c:180:11: warning: unused variable 'c' [-Wunused-variable]
+000-  180 |      char c;
+000-      |           ^
+000/FSK/src/helloworld.c179-1-1unused variable 'a' [-Wunused-variable]1-../src/helloworld.c:179:19: warning: unused variable 'a' [-Wunused-variable]
+000-  179 |      volatile u32 a;
+000-      |                   ^
+000-../src/helloworld.c: In function 'draw_line_a':
+000/FSK/src/helloworld.c263-1-1unused variable 'fy' [-Wunused-variable]1-../src/helloworld.c:263:6: warning: unused variable 'fy' [-Wunused-variable]
+000-  263 |  int fy;
+000-      |      ^~
+000/FSK/src/helloworld.c262-1-1unused variable 'fx' [-Wunused-variable]1-../src/helloworld.c:262:6: warning: unused variable 'fx' [-Wunused-variable]
+000-  262 |  int fx;
+000-      |      ^~
+000-../src/helloworld.c: In function 'draw_line_b':
+000/FSK/src/helloworld.c298-1-1unused variable 'fy' [-Wunused-variable]1-../src/helloworld.c:298:6: warning: unused variable 'fy' [-Wunused-variable]
+000-  298 |  int fy;
+000-      |      ^~
+000/FSK/src/helloworld.c297-1-1unused variable 'fx' [-Wunused-variable]1-../src/helloworld.c:297:6: warning: unused variable 'fx' [-Wunused-variable]
+000-  297 |  int fx;
+000-      |      ^~
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building file: ../src/peri_iic_ctrl.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/peri_iic_ctrl.o" -IE:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/peri_iic_ctrl.d" -MT"src/peri_iic_ctrl.o" -o "src/peri_iic_ctrl.o" "../src/peri_iic_ctrl.c"
+000-../src/peri_iic_ctrl.c: In function 'IIC_WriteByte':
+000/FSK/src/peri_iic_ctrl.c18-1-1unused variable 'CntlReg' [-Wunused-variable]1-../src/peri_iic_ctrl.c:18:6: warning: unused variable 'CntlReg' [-Wunused-variable]
+000-   18 |  u32 CntlReg;
+000-      |      ^~~~~~~
+000/FSK/src/peri_iic_ctrl.c15-1-1unused variable 'AckByteCount' [-Wunused-variable]1-../src/peri_iic_ctrl.c:15:20: warning: unused variable 'AckByteCount' [-Wunused-variable]
+000-   15 |  volatile unsigned AckByteCount;
+000-      |                    ^~~~~~~~~~~~
+000-../src/peri_iic_ctrl.c: In function 'img_zn220_initialize':
+000/FSK/src/peri_iic_ctrl.c110-1-1implicit declaration of function 'usleep' [-Wimplicit-function-declaration]1-../src/peri_iic_ctrl.c:110:7: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+000-  110 |       usleep(1000);
+000-      |       ^~~~~~
+000/FSK/src/peri_iic_ctrl.c102-1-1unused variable 'temp' [-Wunused-variable]1-../src/peri_iic_ctrl.c:102:6: warning: unused variable 'temp' [-Wunused-variable]
+000-  102 |  int temp = sizeof(zn220reg);
+000-      |      ^~~~
+000/FSK/src/peri_iic_ctrl.c98-1-1unused variable 'img_iic_value' [-Wunused-variable]1-../src/peri_iic_ctrl.c:98:5: warning: unused variable 'img_iic_value' [-Wunused-variable]
+000-   98 |  u8 img_iic_value;
+000-      |     ^~~~~~~~~~~~~
+000/FSK/src/peri_iic_ctrl.c97-1-1unused variable 'd' [-Wunused-variable]1-../src/peri_iic_ctrl.c:97:6: warning: unused variable 'd' [-Wunused-variable]
+000-   97 |  u32 d = 0;
+000-      |      ^
+000/FSK/src/peri_iic_ctrl.c95-1-1unused variable 'Status' [-Wunused-variable]1-../src/peri_iic_ctrl.c:95:6: warning: unused variable 'Status' [-Wunused-variable]
+000-   95 |  s32 Status = 0;
+000-      |      ^~~~~~
+000-../src/peri_iic_ctrl.c: In function 'Touch_IIC_Setup':
+000/FSK/src/peri_iic_ctrl.c121-1-1unused variable 'Index' [-Wunused-variable]1-../src/peri_iic_ctrl.c:121:6: warning: unused variable 'Index' [-Wunused-variable]
+000-  121 |  u32 Index;
+000-      |      ^~~~~
+000-../src/peri_iic_ctrl.c: In function 'TouchWriteData':
+000/FSK/src/peri_iic_ctrl.c162-1-1implicit declaration of function 'malloc' [-Wimplicit-function-declaration]1-../src/peri_iic_ctrl.c:162:25: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+000-  162 |    new_buffer = (void *)malloc(ByteCount + 2);
+000-      |                         ^~~~~~
+000/FSK/src/peri_iic_ctrl.c162-1-1incompatible implicit declaration of built-in function 'malloc'1-../src/peri_iic_ctrl.c:162:25: warning: incompatible implicit declaration of built-in function 'malloc'
+000/FSK/src/peri_iic_ctrl.c11-1-1include '<stdlib.h>' or provide a declaration of 'malloc'0-../src/peri_iic_ctrl.c:11:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+000-   10 | #include "zn220_initialize_list.h"
+000-  +++ |+#include <stdlib.h>
+000-   11 | 
+000/FSK/src/peri_iic_ctrl.c183-1-1implicit declaration of function 'free' [-Wimplicit-function-declaration]1-../src/peri_iic_ctrl.c:183:7: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+000-  183 |       free(new_buffer);
+000-      |       ^~~~
+000/FSK/src/peri_iic_ctrl.c183-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:183:7: warning: incompatible implicit declaration of built-in function 'free'
+000/FSK/src/peri_iic_ctrl.c183-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:183:7: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c219-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:219:3: warning: incompatible implicit declaration of built-in function 'free'
+000-  219 |   free(new_buffer);
+000-      |   ^~~~
+000/FSK/src/peri_iic_ctrl.c219-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:219:3: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c228-1-1passing argument 2 of 'XIic_MasterSend' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/peri_iic_ctrl.c:228:52: warning: passing argument 2 of 'XIic_MasterSend' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  228 |       Status = XIic_MasterSend(&Touch_IicInstance, &new_addr, 2);
+000-      |                                                    ^~~~~~~~~
+000-      |                                                    |
+000-      |                                                    u16 * {aka short unsigned int *}
+000-In file included from ../src/peri_iic_ctrl.h:13,
+000-                 from ../src/peri_iic_ctrl.c:9:
+000/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xiic.h537-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u16 *' {aka 'short unsigned int *'}0-E:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include/xiic.h:537:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u16 *' {aka 'short unsigned int *'}
+000-  537 | int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+000-      |                                        ~~~~^~~~~~~~
+000/FSK/src/peri_iic_ctrl.c230-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:230:10: warning: incompatible implicit declaration of built-in function 'free'
+000-  230 |          free(new_buffer);
+000-      |          ^~~~
+000/FSK/src/peri_iic_ctrl.c230-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:230:10: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c237-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:237:13: warning: incompatible implicit declaration of built-in function 'free'
+000-  237 |             free(new_buffer);
+000-      |             ^~~~
+000/FSK/src/peri_iic_ctrl.c237-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:237:13: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c265-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:265:5: warning: incompatible implicit declaration of built-in function 'free'
+000-  265 |     free(new_buffer);
+000-      |     ^~~~
+000/FSK/src/peri_iic_ctrl.c265-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:265:5: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c291-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:291:3: warning: incompatible implicit declaration of built-in function 'free'
+000-  291 |   free(new_buffer);
+000-      |   ^~~~
+000/FSK/src/peri_iic_ctrl.c291-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:291:3: note: include '<stdlib.h>' or provide a declaration of 'free'
+000/FSK/src/peri_iic_ctrl.c295-1-1incompatible implicit declaration of built-in function 'free'1-../src/peri_iic_ctrl.c:295:2: warning: incompatible implicit declaration of built-in function 'free'
+000-  295 |  free(new_buffer);
+000-      |  ^~~~
+000/FSK/src/peri_iic_ctrl.c295-1-1include '<stdlib.h>' or provide a declaration of 'free'0-../src/peri_iic_ctrl.c:295:2: note: include '<stdlib.h>' or provide a declaration of 'free'
+000-../src/peri_iic_ctrl.c: In function 'TouchReadData':
+000/FSK/src/peri_iic_ctrl.c305-1-1unused variable 'a' [-Wunused-variable]1-../src/peri_iic_ctrl.c:305:6: warning: unused variable 'a' [-Wunused-variable]
+000-  305 |  u32 a;
+000-      |      ^
+000-../src/peri_iic_ctrl.c: In function 'Touch_init':
+000/FSK/src/peri_iic_ctrl.c631-1-1passing argument 4 of 'IIC_ReadByte' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/peri_iic_ctrl.c:631:81: warning: passing argument 4 of 'IIC_ReadByte' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  631 |    IIC_ReadByte(TOUCH_IIC_BASE_ADDR, TOUCH_IIC_SLAVE_ADDR, GT9147_ConfigMsgReg, &temp, 1, 2);
+000-      |                                                                                 ^~~~~
+000-      |                                                                                 |
+000-      |                                                                                 uint16_t * {aka short unsigned int *}
+000/FSK/src/peri_iic_ctrl.c42-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}0-../src/peri_iic_ctrl.c:42:94: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+000-   42 | unsigned IIC_ReadByte(UINTPTR IIC_BASE_ADDR, AddressType IIC_ADDR, AddressType SUB_ADDR, u8 *BufferPtr, u16 ByteCount, int addr_size)
+000-      |                                                                                          ~~~~^~~~~~~~~
+000-../src/peri_iic_ctrl.c: In function 'Touch_Read':
+000/FSK/src/peri_iic_ctrl.c665-1-1passing argument 4 of 'IIC_ReadByte' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/peri_iic_ctrl.c:665:79: warning: passing argument 4 of 'IIC_ReadByte' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  665 |  IIC_ReadByte(TOUCH_IIC_BASE_ADDR, TOUCH_IIC_SLAVE_ADDR, GT9147_TouchStateReg,&sta,1,2);
+000-      |                                                                               ^~~~
+000-      |                                                                               |
+000-      |                                                                               uint16_t * {aka short unsigned int *}
+000/FSK/src/peri_iic_ctrl.c42-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}0-../src/peri_iic_ctrl.c:42:94: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+000-   42 | unsigned IIC_ReadByte(UINTPTR IIC_BASE_ADDR, AddressType IIC_ADDR, AddressType SUB_ADDR, u8 *BufferPtr, u16 ByteCount, int addr_size)
+000-      |                                                                                          ~~~~^~~~~~~~~
+000/FSK/src/peri_iic_ctrl.c685-1-1passing argument 4 of 'IIC_WriteByte' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/peri_iic_ctrl.c:685:81: warning: passing argument 4 of 'IIC_WriteByte' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  685 |   IIC_WriteByte(TOUCH_IIC_BASE_ADDR, TOUCH_IIC_SLAVE_ADDR, GT9147_TouchStateReg,&sta,1,2);
+000-      |                                                                                 ^~~~
+000-      |                                                                                 |
+000-      |                                                                                 uint16_t * {aka short unsigned int *}
+000/FSK/src/peri_iic_ctrl.c12-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}0-../src/peri_iic_ctrl.c:12:95: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+000-   12 | unsigned IIC_WriteByte(UINTPTR IIC_BASE_ADDR, AddressType IIC_ADDR, AddressType SUB_ADDR, u8 *BufferPtr, u16 ByteCount, int addr_size)
+000-      |                                                                                           ~~~~^~~~~~~~~
+000-'Finished building: ../src/peri_iic_ctrl.c'
+000-' '
+000-'Building file: ../src/platform.c'
+000-'Invoking: MicroBlaze gcc compiler'
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IE:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+000-'Finished building: ../src/platform.c'
+000-' '
+000-'Building target: FSK.elf'
+000-'Invoking: MicroBlaze gcc linker'
+000-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LE:/PROJ_Archive/release/FMC_LCD_FSK_1_2_B/Firmware/vitis_2020_1/FMC_FSK/export/FMC_FSK/sw/FMC_FSK/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "FSK.elf"  ./src/helloworld.o ./src/peri_iic_ctrl.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: FSK.elf'
+000-' '
+000-'Invoking: MicroBlaze Print Size'
+000-mb-size FSK.elf  |tee "FSK.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  82089	   3140	   3163	  88392	  15948	FSK.elf
+000-'Finished building: FSK.elf.size'
+000-' '
+00255-
+12:15:08 Build Finished (took 1s.444ms)
+
